@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Socket.IO lobby demo</title>
+        <link rel="stylesheet" href="/style.css" type="text/css"> 
+    </head>
+    <body>
+        <div class="info widget"><span id="oc"></span> users online</div>
+        <form class="nameform" action="">
+            <input id="namefield" autocomplete="off" maxlength="20"/><button>join</button>
+        </form>
+        
+        <div class="lobby widget hidden">
+            <div class='availablerooms'></div>
+            <form class="createroomform" action="">
+                <input id="roomnamefield" autocomplete="off" maxlength="20"/><button>create room</button>
+            </form>
+        </div>
+        <div class="roomchat widget hidden">
+            <div class="chatbox widget"></div>
+            <div class="usersinroom widget"></div>
+            <form class="chatform" action="">
+                <input id="chatmessagefield" autocomplete="off" maxlength="240"/><button>send</button>
+            </form>
+            <button id="leaveroombutton">leave room</button>
+        </div>
+        <div class="everybodyonline widget"></div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="/client.js"></script>
+    </body>
+</html>
